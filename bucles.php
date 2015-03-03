@@ -155,8 +155,6 @@
 				<input type="number" name="tabla" placeholder="tu numero aqui" /><br>
 
 				<input type="submit" name="multi" value="Tabla" id="tablas3">
-				<input type="submit" name="multi" value="Tabla" id="tablas3">
-				
 
 		</div>
 
