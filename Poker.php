@@ -34,11 +34,11 @@ $palos = ["picas","treboles","diamantes","corazones"];
      
      		
 		<div class="row">	
-			<div class="col-xs-4 col-xs-offset-4" id="tablas3"><h4>Resultado<h4>	
+			<div class="col-xs-6 col-xs-offset-3" id="tablas3"><h4>Resultado<h4>	
 				<div class="well" id="tablas4">
-				<h5><?php echo $cartas[$c1-1] . " de " . $palos[$p1-1]; ?></h5>
+				<span><?php echo $cartas[$c1-1] . " de " . $palos[$p1-1]; ?></span>
 				 <img src="<?php echo $imagen1; ?> " >
-				<h5><?php echo $cartas[$c2-1] . " de " . $palos[$p2-1]; ?></h5>
+				<span><?php echo $cartas[$c2-1] . " de " . $palos[$p2-1]; ?></span>
 				 <img src="<?php echo $imagen2; ?> " >
 				 	
                           
