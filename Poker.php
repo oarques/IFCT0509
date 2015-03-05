@@ -12,14 +12,36 @@ $p1=rand(1,4);
 $c2=rand(1,13);
 $p2=rand(1,4);
 
+				//texto de la imagen
+$imagen1= "img/" . $c1 . "_" . $p1 . ".jpg" ;
+$imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
+
+//arry //para que salga el nombre de las cartas en letras
+$cartas = ["As","2","3","4","5","6","7","8","9","10","J","Q","K"];
+$palos = ["picas","treboles","diamantes","corazones"];
+}
+
+//para que no me salgan iguales(si la imagen 1 coincide con la imagen 2 que las vuelva a varajar)
+while($imagen1==$imagen2){
+$c1=rand(1,13);
+$p1=rand(1,4);
+
+$c2=rand(1,13);
+$p2=rand(1,4);
 
 $imagen1= "img/" . $c1 . "_" . $p1 . ".jpg" ;
 $imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
 
 
-$cartas = ["As","2","3","4","5","6","7","8","9","10","J","Q","K"];
-$palos = ["picas","treboles","diamantes","corazones"];
 }
+	 
+
+
+	
+
+
+
+
 
  ?>
 <?php include "_header.php" ?>
@@ -36,14 +58,17 @@ $palos = ["picas","treboles","diamantes","corazones"];
 		<div class="row">	
 			<div class="col-xs-6 col-xs-offset-3" id="tablas3"><h4>Resultado<h4>	
 				<div class="well" id="tablas4">
-				<span><?php echo $cartas[$c1-1] . " de " . $palos[$p1-1]; ?></span>
+				
 				 <img src="<?php echo $imagen1; ?> " >
-				<span><?php echo $cartas[$c2-1] . " de " . $palos[$p2-1]; ?></span>
+				
 				 <img src="<?php echo $imagen2; ?> " >
-				 	
-                          
-					  
 				</div>
+			<div class="col-xs-8 col-xs-offset-2" id="tablas3">	
+				<?php echo $cartas[$c1-1] . " de " . $palos[$p1-1] . "  y  " . $cartas[$c2-1] . " de " . $palos[$p2-1] ; ?>
+		   </div>		  
+			
+				
+				
 			</div>
 		</div>
 
