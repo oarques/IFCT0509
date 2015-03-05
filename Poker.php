@@ -41,8 +41,8 @@ if($c1==1 && $c2==1){
 elseif(($c1==1 && $c2==8) or ($c1==8 && $c2==1)) {
 	$nMano="img/a_8.png" ;
 }	
-elseif($c1==13 && $c2==13){
-	$nMano="img/k_k.png" ;
+elseif($c1==1 && $c2==1){
+	$nMano="img/a_a.png" ;
 }
 elseif(($c1==6 && $c2==9) or ($c1==9 && $c2==6)) {
 	$nMano="img/6_9.png" ;
@@ -96,6 +96,7 @@ elseif($c1==11 && $c2==11){
 
 				<input type="submit" name="dar" value="Dar" id="tablas3"> 
 				<input type="submit" name="varagar" value="varagar" id="tablas3">
+				<input type="submit" name="flop" value="flop" id="tablas3">
 
 		</div>
 
