@@ -12,7 +12,7 @@ $p1=rand(1,4);
 $c2=rand(1,13);
 $p2=rand(1,4);
 
-				//texto de la imagen
+			
 $imagen1= "img/" . $c1 . "_" . $p1 . ".jpg" ;
 $imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
 
@@ -21,21 +21,24 @@ $cartas = ["As","2","3","4","5","6","7","8","9","10","J","Q","K"];
 $palos = ["picas","treboles","diamantes","corazones"];
 }
 
-//para que no me salgan iguales(si la imagen 1 coincide con la imagen 2 que las vuelva a varajar)
+//para que no me salgan iguales(si la imagen 1 coincide con la imagen 2 que las vuelva a varajar) y repita todo el proceso
 while($imagen1==$imagen2){
-$c1=rand(1,13);
-$p1=rand(1,4);
+	$c1=rand(1,13);
+	$p1=rand(1,4);
 
-$c2=rand(1,13);
-$p2=rand(1,4);
+	$c2=rand(1,13);
+	$p2=rand(1,4);
 
-$imagen1= "img/" . $c1 . "_" . $p1 . ".jpg" ;
-$imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
+	$imagen1= "img/" . $c1 . "_" . $p1 . ".jpg" ;
+	$imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
 
 
 }
-	 
 
+if($c1==1 && $c2==1){
+	$nMano="img/a_a.png"
+} 	 
+elseif
 
 	
 
@@ -66,8 +69,10 @@ $imagen2= "img/" . $c2 . "_" . $p2 . ".jpg" ;
 			<div class="col-xs-8 col-xs-offset-2" id="tablas3">	
 				<?php echo $cartas[$c1-1] . " de " . $palos[$p1-1] . "  y  " . $cartas[$c2-1] . " de " . $palos[$p2-1] ; ?>
 		   </div>		  
-			
-				
+			<div class="col-xs-6 col-xs-offset-3" >
+				<img src="<?php  echo $nMano; ?>" >
+
+			</div>	
 				
 			</div>
 		</div>
