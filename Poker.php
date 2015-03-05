@@ -36,14 +36,23 @@ while($imagen1==$imagen2){
 }
 
 if($c1==1 && $c2==1){
-	$nMano="img/a_a.png"
-} 	 
-elseif
-
-	
-
-
-
+	$nMano="img/a_a.png" ;
+} 	
+elseif(($c1==1 && $c2==8) or ($c1==8 && $c2==1)) {
+	$nMano="img/a_8.png" ;
+}	
+elseif($c1==13 && $c2==13){
+	$nMano="img/k_k.png" ;
+}
+elseif(($c1==6 && $c2==9) or ($c1==9 && $c2==6)) {
+	$nMano="img/6_9.png" ;
+}
+elseif($c1==2 && $c2==2){
+	$nMano="img/2_2.png" ;
+}
+elseif($c1==11 && $c2==11){
+	$nMano="img/j_j.png" ;
+}
 
 
  ?>
