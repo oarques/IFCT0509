@@ -43,6 +43,7 @@
        <li><a href="calculadora.php">calculadora</a></li>
        <li><a href="calculator2.php">calculadora</a></li>
        <li><a href="dados.php">dados</a></li>
+       <li><a href="email2.php">email2</a></li>
        </li> 
       </ul>  
        </ul>

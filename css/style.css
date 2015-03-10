@@ -141,4 +141,23 @@ body {
   color:#0000FF;
 
 }
-
+.formu{
+    background-color:  #80FFFF;
+    border: 1px solid #333;
+}
+.formu1{
+    background-color:  #FF6347;
+    border: 1px solid #333;
+}
+.formu2{
+    background-color:  #FFA500;
+    border: 1px solid #333;
+}
+.style2{
+margin: 0px; height: 427px; width: 243px;
+border: 1px solid #333; background-color:  #D8BFD8;
+}
+.style1{
+margin: 0px; height: 294px; width: 420px;
+border: 1px solid #333; background-color:  #FF6347;
+}
