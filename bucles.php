@@ -23,9 +23,9 @@
 
 // echo "<h1>La tabla del 7 es:<h1>" ;
 
-// for($i=1 ; $i<=10 ; $i=$i+1){
+ for($i=1 ; $i>=$x ; $i=$i+1){
 
-// echo $i . " x 7 = "  . $i * 7 . "<br>" ; 
+ echo $i . " x 7 = "  . $i * 7 . "<br>" ; 
 
 // }
 // echo "<h1>La tabla del 8 es:<h1>" ;

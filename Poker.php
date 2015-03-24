@@ -112,7 +112,7 @@ elseif($c1==11 && $c2==11){
 		</div>
 		<div class="row">
 			
-				<div class=" well col-xs-6 col-xs-offset-3" id="tapete" >
+				<div class=" well col-xs-6 col-xs-offset-3" >
 					<img src="<?php echo $imagen4; ?> " >
 				
 					 <img src="<?php echo $imagen5; ?> " > 

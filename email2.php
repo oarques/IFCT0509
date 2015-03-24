@@ -11,9 +11,54 @@ $comentario = $_POST["cuerpo"];
 
 if(isset($_POST["enviar"])){
 
-	email_classic($correo, "oscar", $correo, "oscar", $encabezado, $comentario);
+		// si eta el multiple seleccionado quiero que me envie todos los email
+	if($_POST["check"]){
+
+		$emails = $_POST["direcciones"];
+
+		$text = trim($emails);
+
+		$arrayEmails = explode("/n", $text);
+
+		$arrayEmails = array_filter($arrayEmails, 'trim');
+		foreach($arrayEmails as $email){
+
+				email_classic($correo, "oscar", $email, "oscar", $encabezado, $comentario);
+
 }
 
+}
+
+//y si no que me envie solo uno que sera el que hallamos selecionado en el de envio individual.
+//y solo se pone else porque solo hay dos opciones si no se pondria else if y lo que fuera
+else{ email_classic($correo, "oscar", $correo, "oscar", $encabezado, $comentario);
+}	
+
+
+
+
+	//variable que hace referencia a nuestra ariatext donde van puestas nuestras direcciones de correo
+	//que luego quedara sustituida por $email al darle las diferentes funciones anteriormente comentadas
+	$emails = $_POST["direcciones"];
+
+	//trim quita espacios de principio y final de todo el texto
+	$text = trim($emails);
+
+	//explode convierte lineas en un array
+	$arrayEmails = explode("/n", $text);
+
+	//quita espacios de principio y final de cada linea
+	$arrayEmails = array_filter($arrayEmails, 'trim');
+
+	//recorre todas las lineas
+	//pàra cada uno de los emails le das el nombre de linea.$email es la variable final que tendremos que poner junto a las variables del envio. 
+	foreach($arrayEmails as $email){
+
+		email_classic($correo, "oscar", $email, "oscar", $encabezado, $comentario);
+
+	}
+
+}
 
 
 // classic way
@@ -44,7 +89,7 @@ function email_classic($from, $from_name, $to, $to_name, $subject, $message){
 		<div class="row">
 
 	<form action="email2.php" method="post" >
-	<div class="well text-center"><h3>Formulario de Email</h3></div>
+	<div class="well text-center col-xs-8 col-xs-offset-2"><h3>Formulario de Email</h3></div>
 
 			<div class="well col-xs-5 col-xs-offset-2">
 
@@ -56,14 +101,14 @@ function email_classic($from, $from_name, $to, $to_name, $subject, $message){
 
 			<input type="email" name="email" placeholder="Direccion Email">
 			
-			
-			<input type="checkbox" value="multiples" name="check" ><br><h5>Multiples<h5><br>
-			<input type="submit" value="enviar" name="enviar" class="bnt btn-primary" >
-
+			<!-- button -->
+			<input type="checkbox" value="" name="check" ><br><h5>Multiples<h5><br>
+			<input type="submit"  name="enviar" class="btn btn-primary  glyphicon glyphicon-envelope">
+				
 			</div>
 
 			<div class="well col-xs-3 col-xs-offset-0">
-			<textarea name="el texto" rows="16" cols="25" <textarea name="el texto" rows="16" cols="25" class="style2"></textarea>
+			<textarea name="direcciones" rows="16" cols="25"  class="style2"></textarea>
 				
 			
 			</div>

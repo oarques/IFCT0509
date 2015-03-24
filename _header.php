@@ -15,6 +15,7 @@
 	<script src="js/bootstrap.mijs.js"></script>
 </head>
 <body>
+    <div class="well text-center"><h2>Ejercicios Web<h2></div>
 <nav class="navbar navbar-inverse inner">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -43,7 +44,10 @@
        <li><a href="calculadora.php">calculadora</a></li>
        <li><a href="calculator2.php">calculadora</a></li>
        <li><a href="dados.php">dados</a></li>
-       <li><a href="email2.php">email2</a></li>
+       <li><a href="email2.php">email2</a></li> 
+       <li><a href="email_definitivo.php">email Deefinitivo</a></li>
+       <li><a href="email00.php">email00</a></li>
+       <li><a href="envio_emails.php">Envio Emails</a></li>
        </li> 
       </ul>  
        </ul>
